@@ -1,0 +1,164 @@
+/* General setup */
+
+/* 1. -Integración de fuentes con @font-face en fonts.css para no saturar este documento */
+@import url(fonts.css);
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0 auto;
+    min-width: 1000px;
+    max-width: 1400px;
+  }
+  
+  /* Layout */
+  
+  section {
+    float: left;
+    width: 50%;
+  }
+  
+  aside {
+    float: left;
+    width: 30%;
+  }
+  
+  nav {
+    float: left;
+    width: 20%;
+    font-size: 1.5em;
+  }
+  
+  footer {
+    clear: both;
+  }
+  
+  header, section, aside, nav, footer {
+    padding: 20px;
+  }
+  
+  /* header and footer */
+  
+  header, footer {
+    border-top: 5px solid #a66;
+    border-bottom: 5px solid #a66;
+  }
+  
+  /* WRITE YOUR CODE BELOW HERE */
+
+/* 2. Estilización del texto general */
+
+  body{
+    font-family: 'Lora'; /* Fuente serif para el texto principal */
+    font-size: 10px; /* Tamaño de fuente para el cuerpo de la página */
+  }
+
+  h1{
+    font-family: 'Montserrat'; /* Fuente sans-serif para los encabezados*/ 
+    font-size: 2.7em; /* Tamaño de fuente relativo para los encabezados */
+    letter-spacing: 5px; /* Espaciado entre letras */
+  }
+
+  h2{
+    font-family: 'Montserrat'; /* Fuente sans-serif para los encabezados */ 
+    font-size: 2em; /* Tamaño de fuente relativo para los encabezados */
+    letter-spacing: 5px; /* Espaciado entre letras */
+  }
+
+  body p {
+    line-height: 1.7; /* Altura de linea */ 
+    letter-spacing: 1.1px; /* Espaciado entre letras */
+    word-spacing: 2px; /* Espaciado entre palabras */
+  }
+
+  header{
+    text-align: center; /* Alineamos el encabezado principal al centro */
+  }
+
+  section h2 + p{
+    text-indent: 20px; /* Sangria de 20px para los primeros parrafos despues de cada encabezado dentro del <section> */
+  }
+
+/* 3. Estilización de Enlaces */
+
+a{
+  outline: none;
+  
+}
+
+a:link{
+  color: #ac4147;
+}
+
+a:visited{
+  color: #f88863;
+}
+
+a:hover{
+  color: #ffc27f;
+}
+
+a:focus{
+  color: #411f2d;
+}
+
+a:hover, a:focus{
+  text-decoration: none;
+}
+
+a:active{
+  font-weight: bold;
+  background-color: #ffc27f;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+section a {
+  display: inline;
+  /* align-items: center; */
+}
+
+section p a:nth-of-type(-n+4)::after {
+  content: "";
+  background-image: url(./external-link-52.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 12px;  /* Ajusta tamaño */
+  height: 12px;
+  margin-left: 5px;
+  display: inline-block;
+}
+
+/* 4 Estilizacion de Listas */
+
+section, aside, li{
+  line-height: 1.7;
+  list-style-type: square;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+/* 5 Menu de navegación */
+
+nav li{
+  list-style-type: none;
+  border: 1px solid #f88863;
+  border-radius: 10px;
+  padding: 18px;
+  text-align: center;
+  margin-top: 15px;
+} 
+
+nav a{
+  text-decoration: none;
+  align-items: center;
+}
+
+nav a:hover{
+  font-weight: bold;
+  font-size: large;
+  color: #f88863;
+}
+
