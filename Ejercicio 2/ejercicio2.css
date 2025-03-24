@@ -100,6 +100,10 @@ aside{
 
 .photos{
   display: grid;
-  grid-template-columns: auto auto; /* Con esto hacemos que cada columna tenga el tamaño adeacuado al tamaño de viewport */
+  grid-template-columns: repeat(auto-fit, minmax(50px,170px)); /* Con esto hacemos que cada columna tenga el tamaño adeacuado al tamaño de viewport */
+  grid-auto-rows: 1fr;
+  grid-auto-flow: row;
+  grid-auto-columns: 1fr;
+  margin: auto;
   gap: 1px; /* Separación de 1px entre las imagenes */
 }
